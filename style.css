@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0a0a0f, #050507);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #6dd5ed, #2193b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: #aaa;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #00d4ff;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+/* TEAM COLORS */
+.tech:hover { border-color: #00eaff; }
+.design:hover { border-color: #ff4ecd; }
+.content:hover { border-color: #ffc107; }
+.outreach:hover { border-color: #00ff7f; }
+
+/* CARD CONTENT */
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #bbb;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.card span {
+  color: #00d4ff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0,212,255,0.15) 0%, transparent 60%);
+  animation: moveGlow 10s infinite alternate ease-in-out;
+  z-index: 0;
+}
+
+@keyframes moveGlow {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(10%, 10%); }
+}
